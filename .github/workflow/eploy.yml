@@ -10,6 +10,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
+      - name: Generate config.js
+        run: |
+          cat > frontend/config.js << EOF
+          export const SUPABASE_URL = "${{ secrets.SUPABASE_URL }}";
+          export const SUPABASE_ANON_KEY = "${{ secrets.SUPABASE_ANON_KEY }}";
+          EOF
+      
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
