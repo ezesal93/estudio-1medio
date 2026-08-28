@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plan de Estudio - 1º Medio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="config.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.8/katex.min.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.8/katex.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.8/contrib/auto-render.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.8/contrib/mhchem.min.js"></script>
+</head>
+<body class="bg-slate-50 min-h-screen text-slate-800">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-indigo-600 to-violet-600 text-white shadow-md">
+    <div class="max-w-5xl mx-auto px-4 py-6 sm:py-8">
+      <h1 class="text-2xl sm:text-3xl font-bold">Plan de Estudio - 1º Medio</h1>
+      <p id="semana-actual" class="mt-1 text-indigo-100 text-sm sm:text-base">
+        <span id="semana-numero" class="font-semibold">-</span>
+      </p>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 py-6 sm:py-8 space-y-8">
+
+    <!-- Selector de semana -->
+    <div class="mb-4">
+      <label for="selector-semana" class="block text-sm font-semibold mb-2">Selecciona una semana:</label>
+      <select id="selector-semana" class="w-full p-2 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-500">
+        <option value="">Cargando semanas...</option>
+      </select>
+    </div>
+
+    <!-- Sesiones -->
+    <section>
+      <h2 class="text-xl font-bold text-slate-800 mb-4">Sesiones de esta semana</h2>
+
+      <div id="tabs-asignaturas" class="mb-4 flex flex-wrap gap-2 border-b">
+        <!-- Los tabs se generan con JS -->
+      </div>
+
+      <div id="lista-sesiones" class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <p class="text-sm text-slate-500 sm:col-span-2">Cargando sesiones de la semana...</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="max-w-5xl mx-auto px-4 py-8 text-center text-sm text-slate-400">
+    Plataforma educativa · 1º Medio
+  </footer>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>

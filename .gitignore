@@ -1,0 +1,9 @@
+# Variables de entorno / secretos
+.env
+frontend/config.js
+
+# Dependencias
+node_modules/
+
+# Supabase local
+supabase/.temp/
